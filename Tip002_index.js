@@ -1,7 +1,4 @@
 
-
-import './style.scss';
-import './editor.scss';
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const blockHeader = <h2>{ __( 'Código de ejemplo para personalizar el icono de tu bloque con Dashicon' ) }</h2>;
@@ -16,9 +13,9 @@ export default registerBlockType(
         title: __( 'registerBlockType - Demo' ),
         category: 'common',
         description: __('Código de ejemplo para personalizar el icono de tu bloque con Dashicon'),
-        // Primer ejemplo con Dashicon forms
+        // Primer ejemplo con Dashicon forms https://developer.wordpress.org/resource/dashicons/#forms
         icon: 'forms',
-        // Segundo ejemplo con Dashicon admin-site
+        // Segundo ejemplo con Dashicon admin-site https://developer.wordpress.org/resource/dashicons/#admin-site
         //icon: 'admin-site',
         keywords: [
             __( 'Prueba' ),
