@@ -22,34 +22,16 @@ export default registerBlockType(
             __( 'Primer Ejemplo' ),
             __( 'Bloque ejemplo' ),
         ],
-        attributes: {
-            content: {
-                type: 'array',
-                source: 'children',
-                selector: 'div.my-content',
-            },
-        },
         edit: props => {
-            const onChangeContent = value => {
-                props.setAttributes( { content: value } );
-            };
             return <div className={props.className}>
                 { blockHeader }
-                <RichText
-                    tagname="div"
-                    multiline="p"
-                    className="my-content"
-                    placeholder={ __( 'Introduce tu ipsum aquí..' ) }
-                    value={ props.attributes.content }
-                    onChange={ onChangeContent }
-                />
             </div>;
         },
         save: props => {
             return (
                 <div className={ props.className }>
                     <div className="my-content">
-                      { props.attributes.content }
+                      { blockHeader }
                     </div>
                 </div>
             );
